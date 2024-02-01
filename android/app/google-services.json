@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "91185231499",
+    "project_id": "candlee",
+    "storage_bucket": "candlee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91185231499:android:7bbbe7798845dc83e1c68e",
+        "android_client_info": {
+          "package_name": "com.candel.candel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6sB88U8H4wjT9560aze489xtVdFdTIRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
