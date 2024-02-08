@@ -14,7 +14,7 @@ class AuthRepository {
   Future<UserCredential?> register(UserModel user) async {
     try {
       final response =
-      await userRef.where("username", isEqualTo: user.username!).get();
+      await userRef.where("name", isEqualTo: user.name!).get();
       if (response.size != 0) {
         throw Exception("Username already exists");
       }
@@ -48,7 +48,7 @@ class AuthRepository {
       final response = await userRef.doc(id).get();
       var user = response.data()!;
       user.fcm = token ?? "";
-      await userRef.doc(user.id).set(user);
+      await userRef.doc(user.userId).set(user);// yha u.id thyo maila u.userid grya xu
       return user;
     } catch (err) {
       rethrow;
