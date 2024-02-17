@@ -137,7 +137,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                                        return RegisterScreen();
+                                      },),);
+
+                                    },
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
