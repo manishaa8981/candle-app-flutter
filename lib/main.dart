@@ -4,9 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
+import 'screens/auth/forget_password_screen.dart';
+import 'screens/auth/login_screen.dart';
+import 'screens/auth/register_screen.dart';
+import 'screens/category/single_category_screen.dart';
+import 'screens/dashboard/dashboard.dart';
+import 'screens/product/add_product_screen.dart';
+import 'screens/product/single_product_screen.dart';
+import 'screens/splash_screen.dart';
 import 'services/local_notification_service.dart';
 import 'viewmodels/auth_viewmodel.dart';
 import 'viewmodels/global_ui_viewmodel.dart';
+import 'viewmodels/product_viewmodel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -59,10 +68,10 @@ class MyApp extends StatelessWidget {
                   "/forget-password": (BuildContext context)=>ForgetPasswordScreen(),
                   "/dashboard": (BuildContext context)=>DashboardScreen(),
                   "/add-product": (BuildContext context)=>AddProductScreen(),
-                  "/edit-product": (BuildContext context)=>EditProductScreen(),
+                  // "/edit-product": (BuildContext context)=>EditProductScreen(),
                   "/single-product": (BuildContext context)=>SingleProductScreen(),
                   "/single-category": (BuildContext context)=>SingleCategoryScreen(),
-                  "/my-products": (BuildContext context)=>MyProductScreen(),
+                  // "/my-products": (BuildContext context)=>MyProductScreen(),
                 },
               );
             }
