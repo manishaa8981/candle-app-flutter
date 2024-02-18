@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/LOGO.png"),
+                  image: AssetImage("assets/images/splashh.gif"),
                   opacity: 0,
                   fit: BoxFit.cover,
                 ),
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
-                  Image.asset("assets/images/download.png",
+                  Image.asset("assets/images/img_3.png",
                     height: 100,
                     width: 100,),
                   SizedBox(

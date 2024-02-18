@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:n_baz/models/favorite_model.dart';
-import 'package:n_baz/viewmodels/auth_viewmodel.dart';
 import 'package:provider/provider.dart';
-
+import '../../model/favorite_model.dart';
 import '../../repositories/cart_repositories.dart';
 import '../../viewmodels/auth_viewmodel.dart';
 import '../../viewmodels/global_ui_viewmodel.dart';

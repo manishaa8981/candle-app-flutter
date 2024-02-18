@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,6 +6,9 @@ import '../../viewmodels/auth_viewmodel.dart';
 import '../../viewmodels/category_viewmodel.dart';
 import '../../viewmodels/global_ui_viewmodel.dart';
 import '../../viewmodels/product_viewmodel.dart';
+import '../account/account_screen.dart';
+import '../cart/cart_screen.dart';
+import '../home/home_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
