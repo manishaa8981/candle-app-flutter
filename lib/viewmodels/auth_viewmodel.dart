@@ -1,13 +1,10 @@
+import 'package:candel/services/firebase_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:n_baz/models/product_model.dart';
-import 'package:n_baz/models/user_model.dart';
-import 'package:n_baz/repositories/auth_repositories.dart';
-import 'package:n_baz/services/firebase_service.dart';
-import 'package:n_baz/viewmodels/global_ui_viewmodel.dart';
-
-import '../models/favorite_model.dart';
+import '../model/favorite_model.dart';
+import '../model/product_model.dart';
+import '../model/user_model.dart';
 import '../repositories/auth_repositories.dart';
 import '../repositories/favorite_repositories.dart';
 import '../repositories/product_repositories.dart';
