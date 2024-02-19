@@ -136,7 +136,7 @@ class _SingleCategoryBodyState extends State<SingleCategoryBody> {
                     fit: BoxFit.cover,
                     errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
                       return Image.asset(
-                        'assets/images/logo.jpeg',
+                        'assets/images/img_2.png',
                         height: 300,
                         width: double.infinity,
                         fit: BoxFit.cover,

@@ -166,12 +166,22 @@ class _SingleProductBodyState extends State<SingleProductBody> {
                         Expanded(
                           flex: 2,
                             child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
+                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20),
+                                        side: BorderSide(color: Colors.pink)
+                                    )
+                                ),
+                              ),
                           onPressed: () {
                             CartRepository().addToCart(singleProductVM.product!, quantity).then((value) {
                               ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Cart updated")));
                             });
                           },
-                          child: Text("Add to cart", style: TextStyle(fontSize: 18),),
+
+                          child: Text("Add to cart", style: TextStyle(fontSize: 18 ) ,),
                         )),
                       ],
                     ),

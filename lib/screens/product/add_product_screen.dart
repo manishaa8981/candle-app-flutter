@@ -121,6 +121,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
             child: SingleChildScrollView(
               physics: BouncingScrollPhysics(),
               child: Container(
+                color: Colors.grey.shade100,
                 padding: EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -210,6 +211,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                     ),
                     SizedBox(height: 10,),
                     Container(
+
                       padding: EdgeInsets.all(5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -246,11 +248,11 @@ class _AddProductScreenState extends State<AddProductScreen> {
                       width: double.infinity,
                       child: ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
-                                    side: BorderSide(color: Colors.blue)
+                                    side: BorderSide(color: Colors.pink)
                                 )
                             ),
                             padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 10)),
@@ -266,11 +268,11 @@ class _AddProductScreenState extends State<AddProductScreen> {
                       width: double.infinity,
                       child: ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.black) ,
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.grey) ,
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
-                                    side: BorderSide(color: Colors.black)
+                                    side: BorderSide(color: Colors.grey)
                                 )
                             ),
                             padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 10)),

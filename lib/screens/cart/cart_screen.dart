@@ -63,6 +63,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Consumer<AuthViewModel>(builder: (context, authVM, child) {
       return Container(
+        color: Colors.pink.shade50,
         child: RefreshIndicator(
           onRefresh: getInit,
           child: SingleChildScrollView(
@@ -112,8 +113,10 @@ class _CartScreenState extends State<CartScreen> {
                                   .pushNamed("/single-product", arguments: e.product.id!);
                             },
                             child: Container(
+                              color: Colors.lightBlueAccent.shade100,
                               margin: EdgeInsets.symmetric(horizontal: 10),
                               child: Card(
+                                // color: Colors.lightBlueAccent,
                                 child: ListTile(
                                   trailing: IconButton(
                                     iconSize: 25,

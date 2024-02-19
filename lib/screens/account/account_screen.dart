@@ -43,9 +43,12 @@ class _AccountScreenState extends State<AccountScreen> {
     return SingleChildScrollView(
       child: Column(
         children: [
+
           SizedBox(
             height: 60,
           ),
+          Text("My Account" , style: TextStyle(fontFamily: 'Poppins' , color: Colors.pink , fontSize:
+          20 , fontWeight: FontWeight.bold , ),),
           Image.asset(
             "assets/images/img_3.png",
             height: 100,
@@ -95,7 +98,7 @@ class _AccountScreenState extends State<AccountScreen> {
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 5),
         child: Card(
-            elevation: 4,color: Colors.transparent,
+            elevation: 4,
             child: ListTile(
                 tileColor: Colors.pink.shade100,
                 textColor: Colors.black,titleTextStyle: TextStyle(fontWeight: FontWeight.bold , fontSize: 20),

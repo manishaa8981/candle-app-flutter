@@ -40,11 +40,11 @@ class CategoryRepository{
 
   List<CategoryModel> makeCategory(){
       return [
-        CategoryModel(categoryName: "amaryllis", status: "active", imageUrl: "https://florgeous.com/wp-content/uploads/2019/09/amaryllis-plant.jpg"),
-        CategoryModel(categoryName: "Aconite", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/aconite.jpg"),
-        CategoryModel(categoryName: "Geum", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/geum.jpg"),
-        CategoryModel(categoryName: "Rose", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/rose.jpg"),
-        CategoryModel(categoryName: "SunFlower", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/sunflower.jpg"),
+        CategoryModel(categoryName: "Cadle Stick", status: "active", imageUrl: "assets/images/2.webp"),
+        CategoryModel(categoryName: "Autumn Candle", status: "active", imageUrl: "assets/images/3.jpeg"),
+        CategoryModel(categoryName: "Christmas Candle", status: "active", imageUrl: "assets/images/_4.webp"),
+        CategoryModel(categoryName: "Birthday Candle", status: "active", imageUrl: "assets/images/slide1.jpg"),
+        CategoryModel(categoryName: "Winter Candle", status: "active", imageUrl: "assets/images/slider1.jpg"),
       ];
   }
 
