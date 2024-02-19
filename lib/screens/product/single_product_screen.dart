@@ -98,7 +98,7 @@ class _SingleProductBodyState extends State<SingleProductBody> {
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.pink.shade100,
                       border: Border(
                         top: BorderSide(width: 1, color: Colors.black12),
                       ),
@@ -121,14 +121,15 @@ class _SingleProductBodyState extends State<SingleProductBody> {
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
-                                        color: Color(0xFFE6F0F5),
+                                        color: Colors.blueAccent,
                                         borderRadius: BorderRadius.circular(50)),
                                     padding: EdgeInsets.all(5),
                                     child: Icon(
                                       Icons.remove,
-                                      size: 15,
+                                      size: 20,
                                     ),
                                   ),
+
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -147,12 +148,12 @@ class _SingleProductBodyState extends State<SingleProductBody> {
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
-                                        color: Color(0xFFE6F0F5),
+                                        color: Colors.blueAccent,
                                         borderRadius: BorderRadius.circular(50)),
                                     padding: EdgeInsets.all(5),
                                     child: Icon(
                                       Icons.add,
-                                      size: 15,
+                                      size: 20,
                                     ),
                                   ),
                                 ),
@@ -170,7 +171,7 @@ class _SingleProductBodyState extends State<SingleProductBody> {
                               ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Cart updated")));
                             });
                           },
-                          child: Text("Add to cart"),
+                          child: Text("Add to cart", style: TextStyle(fontSize: 18),),
                         )),
                       ],
                     ),
@@ -197,13 +198,13 @@ class _SingleProductBodyState extends State<SingleProductBody> {
                       })
                     ],
                   ),
-                  backgroundColor: Color(0xFFf5f5f4),
+                  backgroundColor: Colors.pink,
                   body: SingleChildScrollView(
                     child: Column(
                       children: [
                         Image.network(
                           singleProductVM.product!.imageUrl.toString(),
-                          height: 400,
+                          height: 300,
                           width: double.infinity,
                           fit: BoxFit.cover,
                           errorBuilder:

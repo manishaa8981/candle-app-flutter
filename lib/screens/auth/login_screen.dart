@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -63,56 +62,78 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/splashh.gif"),
-                  opacity: 0,
+                  image: AssetImage("assets/images/splashh3.gif"),
+                  opacity: 1,
                   fit: BoxFit.cover,
                 ),
               ),
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
+                  Text("Welcome Sign In your Account" , style: TextStyle(fontSize: 24, color: Colors.pink , fontFamily: 'Poppins'),),
                   Image.asset("assets/images/img_3.png",
                     height: 100,
                     width: 100,),
                   SizedBox(
                     height: 5,
                   ),
+                  const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("Email Address" , style: TextStyle(fontSize: 20 , ),textAlign: TextAlign.start, ) ,
+                      ),
+                    ],
+                  ),
                   TextFormField(
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     validator: ValidateLogin.emailValidate,
-                    style: const TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 16.0, color: Colors.black),
+                    style: const TextStyle( fontFamily: "Poppins", fontSize: 16.0, color: Colors.black),
                     decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-                      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.email,
                         color: Colors.black,
                         size: 22.0,
                       ),
-                      hintText: 'Email Address',
-                      hintStyle: TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
+                      // hintText: 'Email Address',
+                      // hintStyle: TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
                     ),
                   ),
                   SizedBox(
                     height: 10,
                   ),
+                  const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("Password" , style: TextStyle(fontSize: 20)),
+                      ),
+                    ],
+                  ),
+
                   TextFormField(
                     controller: _passwordController,
                     obscureText: _obscureTextPassword,
                     validator: ValidateLogin.password,
-                    style: const TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 16.0, color: Colors.black),
+                    style: const TextStyle(fontFamily: 'Poppins', fontSize: 16.0, color: Colors.black),
                     decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-                      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                       prefixIcon: const Icon(
                         Icons.lock,
                         size: 22.0,
                         color: Colors.black,
                       ),
-                      hintText: 'Password',
-                      hintStyle: const TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
+                      // hintText: 'Password',
+                      // hintStyle: const TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
                       suffixIcon: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -138,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: Text(
                           "Forgot password?",
-                          style: TextStyle(color: Colors.grey.shade800),
+                          style: TextStyle(color: Colors.blue , fontSize: 16 , fontWeight: FontWeight.bold,fontFamily: 'Poppins'),
                         ),
                       )),
                   SizedBox(
@@ -148,17 +169,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                         style: ButtonStyle(
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: Colors.blue))),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: Colors.blue))),
                           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 20)),
-                          backgroundColor: MaterialStateProperty.all<Color>(Color(
-                              0xffc75352)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
                         ),
                         onPressed: () {
                           login();
                         },
                         child: Text(
                           "Log In",
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 24, fontFamily: "Poppins"),
                         )),
                   ),
                   SizedBox(
@@ -177,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                           child: const Text(
                             "Sign up",
-                            style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 14),
+                            style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 16, fontFamily: 'Poppins'),
                           ))
                     ],
                   ),

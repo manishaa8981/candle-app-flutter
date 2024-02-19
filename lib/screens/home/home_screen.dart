@@ -45,12 +45,11 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (context, categoryVM, authVM, productVM, child) {
       return Container(decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/putali.jpeg"),
-          opacity: 0.1,
+          image: AssetImage("assets/images/img_3.png"),
+          opacity: 0.2,
           fit: BoxFit.cover,
         ),
       ),
-
         child: Stack(
           children: [
             Positioned.fill(
@@ -62,11 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
                         Image.asset(
                           "assets/images/img_1.png",
                           height: 200,
-                                                    width: double.infinity,
+                          width: double.infinity,
                           fit: BoxFit.fill,
                         ),
                         SizedBox(
@@ -86,12 +84,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         SizedBox(
                           height: 20,
                         ),
-                        Container(
-                              margin: EdgeInsets.symmetric(horizontal: 10),
-                            child: Text(
-                              "Products",
-                              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                            )),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                              child: Text(
+                                "Products",
+                                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold ,fontFamily: 'Poppins', color: Colors.pink),
+                              )),
+                        ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10),
                           child: GridView.count(
@@ -129,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
               border: Border.all(
                 color: Colors.black26,
               ),
-              color: Colors.white,
+              color: Colors.pink.shade100,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
@@ -143,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               children: [
                 Expanded(child: Container()),
-                Expanded(child: Image.asset("assets/images/logo.jpeg", height: 70, width: 70,)),
+                Expanded(child: Image.asset("assets/images/img_3.png", height: 70, width: 70,)),
                 Expanded(
                     child: Align(
                       alignment: Alignment.centerRight,
@@ -159,18 +160,24 @@ class _HomeScreenState extends State<HomeScreen> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
-              "Welcome,",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            )),
-        Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
-              authVM.loggedInUser != null ? authVM.loggedInUser!.name.toString() : "Guest",
-              style: const TextStyle(fontSize: 30,color: Colors.green, fontWeight: FontWeight.bold),
-            )),
+        Align(
+          alignment: Alignment.center,
+          child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                "Explore Here",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold , color: Colors.pink) ,
+              )),
+        ),
+        // Align(
+        //   alignment: Alignment.center,
+        //   child: Container(
+        //       margin: EdgeInsets.symmetric(horizontal: 10),
+        //       child: Text(
+        //         authVM.loggedInUser != null ? authVM.loggedInUser!.name.toString() : "Guest",
+        //         style: const TextStyle(fontSize: 20,color: Colors.black, fontWeight: FontWeight.bold),
+        //       )),
+        // ),
       ],
     );
   }
@@ -213,55 +220,58 @@ class _HomeScreenState extends State<HomeScreen> {
         // print(e.id);
         Navigator.of(context).pushNamed("/single-product", arguments: e.id);
       },
-      child: Container(
-        width: 250,
-        child: Card(
-          elevation: 5,
-          child: Stack(
-            children: [
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.network(
-                    e.imageUrl.toString(),
-                    height: 200,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                    errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-                      return Image.asset(
-                        'assets/images/img_1.png',
-                        height: 200,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      );
-                    },
-                  )),
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Container(
+      child: Align(
+        alignment: Alignment.center,
+        child: Container(
+          width: 250,
+          child: Card(
+            elevation: 5,
+            child: Stack(
+              children: [
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.network(
+                      e.imageUrl.toString(),
+                      height: 200,
                       width: double.infinity,
-                      padding: EdgeInsets.symmetric(vertical: 10),
-                      decoration: BoxDecoration(color: Colors.pink.shade100.withOpacity(1)),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            e.productName.toString(),
-                            style: TextStyle(fontSize: 20, ),
-                            textAlign: TextAlign.center,
-                            maxLines: 2,
-                          ),
-                          Text(
-                            "Rs. "+e.productPrice.toString(),
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                            textAlign: TextAlign.center,
-                            maxLines: 2,
-                          ),
-                        ],
-                      )),
+                      fit: BoxFit.cover,
+                      errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                        return Image.asset(
+                          'assets/images/img_1.png',
+                          height: 200,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        );
+                      },
+                    )),
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        decoration: BoxDecoration(color: Colors.pink.shade100.withOpacity(1)),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              e.productName.toString(),
+                              style: TextStyle(fontSize: 20, ),
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                            ),
+                            Text(
+                              "Rs. "+e.productPrice.toString(),
+                              style: TextStyle(fontSize: 15, color: Colors.white),
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                            ),
+                          ],
+                        )),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

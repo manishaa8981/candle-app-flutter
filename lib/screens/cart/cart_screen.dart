@@ -133,7 +133,7 @@ class _CartScreenState extends State<CartScreen> {
                                       borderRadius: BorderRadius.circular(50),
                                       child: Image.network(
                                         e.product.imageUrl.toString(),
-                                        width: 100,
+                                        width: 60,
                                         height: 100,
                                         fit: BoxFit.cover,
                                         errorBuilder: (BuildContext context, Object exception,
