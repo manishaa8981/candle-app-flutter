@@ -58,7 +58,7 @@ class _SingleCategoryBodyState extends State<SingleCategoryBody> {
         Scaffold(
           appBar: AppBar(
             title: const Text('Categories'),
-            backgroundColor: Colors.black54,
+            backgroundColor: Colors.pink.shade100,
           ),
           body: RefreshIndicator(
             onRefresh: () => getData(categoryId.toString()),
@@ -80,11 +80,14 @@ class _SingleCategoryBodyState extends State<SingleCategoryBody> {
                             child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(color: Colors.white70 , borderRadius: BorderRadius.circular(8.0)),
-                                child: Text(
-                                  singleCategoryVM.category!.categoryName.toString() ,
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.w700
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    singleCategoryVM.category!.categoryName.toString() ,
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 )),
                           ),
@@ -148,20 +151,20 @@ class _SingleCategoryBodyState extends State<SingleCategoryBody> {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                       width: double.infinity,
-                      padding: EdgeInsets.symmetric(vertical: 5),
-                      decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
+                      padding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                      decoration: BoxDecoration(color: Colors.white.withOpacity(0.4),),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
                             e.productName.toString(),
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: Colors.pink),
                             textAlign: TextAlign.center,
                             maxLines: 2,
                           ),
                           Text(
                             "Rs. "+e.productPrice.toString(),
-                            style: TextStyle(fontSize: 15, color: Colors.blueAccent),
+                            style: TextStyle(fontSize: 15, color: Colors.black),
                             textAlign: TextAlign.center,
                             maxLines: 2,
                           ),

@@ -79,7 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               //background image with low opacity
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/4960.png_860.png"),
+                  image: AssetImage("assets/images/splashh3.gif"),
                   opacity: 0.2,
                   fit: BoxFit.cover,
                 ),
@@ -89,7 +89,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/images/download.png",
+                    "assets/images/img_3.png",
                     height: 150,
                     width: 400,
                   ),

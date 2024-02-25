@@ -40,11 +40,11 @@ class CategoryRepository{
 
   List<CategoryModel> makeCategory(){
       return [
-        CategoryModel(categoryName: "Cadle Stick", status: "active", imageUrl: "assets/images/2.webp"),
-        CategoryModel(categoryName: "Autumn Candle", status: "active", imageUrl: "assets/images/3.jpeg"),
-        CategoryModel(categoryName: "Christmas Candle", status: "active", imageUrl: "assets/images/_4.webp"),
-        CategoryModel(categoryName: "Birthday Candle", status: "active", imageUrl: "assets/images/slide1.jpg"),
-        CategoryModel(categoryName: "Winter Candle", status: "active", imageUrl: "assets/images/slider1.jpg"),
+        CategoryModel(categoryName: "Cadle Stick", status: "active", imageUrl: "https://www.pexels.com/photo/white-candle-in-clear-glass-holder-7445025/"),
+        CategoryModel(categoryName: "Autumn Candle", status: "active", imageUrl: "https://www.pexels.com/photo/scented-candle-in-close-up-photography-6794168/"),
+        CategoryModel(categoryName: "Christmas Candle", status: "active", imageUrl: "https://www.pexels.com/photo/still-life-with-scented-candles-10789371/"),
+        CategoryModel(categoryName: "Birthday Candle", status: "active", imageUrl: "https://www.pexels.com/photo/close-up-photo-of-a-scented-candle-9869339/"),
+        CategoryModel(categoryName: "Winter Candle", status: "active", imageUrl: "https://www.pexels.com/photo/person-hand-glass-holding-7749035/"),
       ];
   }
 

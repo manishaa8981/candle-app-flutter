@@ -75,8 +75,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: [...categoryVM.categories.map((e) => CategoryCard(e))],
+                            child: Builder(
+                              builder: (context) {
+                                for(var a in categoryVM.categories){
+                                  print(a);
+                                  print("////");
+                                }
+                                return Row(
+                                  children: [...categoryVM.categories.map((e) => CategoryCard(e))],
+                                );
+                              }
                             ),
                           ),
                         ),
